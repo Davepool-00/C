@@ -1,0 +1,23 @@
+//By Stephane Dave M. Balanghig
+int main(){
+    float quotient, raised,product,sum;
+    int one, two, three;
+
+    printf("\n Enter three numbers: \n");
+
+    //values input by the user
+    scanf ("%d%d%d",&one, &two, &three);
+    //multiply
+    product=one*two;
+    //addition
+    sum=two+three;
+    //division
+    quotient = product / sum;
+    //raise
+    raised = pow(quotient,2);
+
+    printf("\n The result is: %f",raised);
+
+    return 0;
+}
+//By Stephane Dave M. Balanghig

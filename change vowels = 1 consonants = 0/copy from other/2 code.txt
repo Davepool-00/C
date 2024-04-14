@@ -1,0 +1,38 @@
+#include<stdio.h>
+
+void conso_vow();
+
+int main(){
+    char str[] = "Caraga State University";
+    puts(str);
+    conso_vow(str);
+    
+  return 0;
+}
+
+void conso_vow(char str[]){
+int i;
+  
+    for(i = 0; str[i] != '\0'; i++){
+        switch(str[i]){
+        case 'a':
+        case 'e': 
+        case 'i':
+        case 'o':
+        case 'u':
+        case 'A':
+        case 'E':
+        case 'I':
+        case 'O':
+        case 'U':
+            printf("1");
+            break;
+        case ' ': 
+             printf(" ");
+            break;
+        default: 
+            printf("0");
+            break;
+        }
+    }
+}

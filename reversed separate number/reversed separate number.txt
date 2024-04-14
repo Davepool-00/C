@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    
+    printf("Enter a 5 digit number: ");
+    scanf("%d",&n);
+    
+    while(n > 0) 
+    {
+        int mod = n % 10;  //split last digit from number
+        printf("%d   ",mod); //print the digit. 
+    
+        n = n / 10;    //divide num by 10. num /= 10 also a valid one 
+    }
+
+    return 0;
+}

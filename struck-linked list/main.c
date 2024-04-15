@@ -76,7 +76,7 @@ int main(){
     one -> data  = "2 ako sunod";
     two -> data = "3 kini sunod";
     three -> data = "4 unya nako";
-    four -> data = "1 akoyuna";
+    four -> data = "1 akoy una";
     five -> data = "5 ako last";
 
     // !! now to connect the nodes

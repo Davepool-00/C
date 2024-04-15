@@ -1,8 +1,10 @@
-    #include <stdio.h>
-    #include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 
     struct Node {
-        int data;
+        char  *data;
         struct Node *next;
     };
 
@@ -21,8 +23,10 @@ void BubbleSort(struct Node *head) {
         ptr = head;
 
         while (ptr->next != last) {
-            if (ptr->data > ptr->next->data) {
-                int temp = ptr->data;
+            // Compare strings using strcmp
+            if (strcmp(ptr->data, ptr->next->data) > 0) {
+                // Swap data
+                char *temp = ptr->data;
                 ptr->data = ptr->next->data;
                 ptr->next->data = temp;
                 swapped = 1;
@@ -37,7 +41,7 @@ void BubbleSort(struct Node *head) {
 // !! This makes the list to be printed
     void PrintLIST(struct Node *node){
         while (node != NULL){
-            printf("%d ",node->data);
+            printf("%s ",node->data);
             node = node->next;
         }
     }
@@ -62,11 +66,11 @@ int main(){
     five = malloc(sizeof(struct Node));
 
     //!! now to add the values of the nodes
-    one -> data  = 111;
-    two -> data = 22;
-    three -> data = 3;
-    four -> data = 4444;
-    five -> data = 55555;
+    one -> data  = "b";
+    two -> data = "c";
+    three -> data = "e";
+    four -> data = "a";
+    five -> data = "d";
 
     // !! now to connect the nodes
     one -> next = two;

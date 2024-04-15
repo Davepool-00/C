@@ -33,8 +33,10 @@ void BubbleSort(struct Node *head) {
                 ptr->next->data = temp;
                 swapped = 1;
             }
+            // !! to compare another node
             ptr = ptr->next;
         }
+        // !! and this updates the current node after it is swapped
         last = ptr;
     } while (swapped);
 }
@@ -50,7 +52,7 @@ void BubbleSort(struct Node *head) {
 
 int main(){
     //!! Here you create nodes
-    // !! basically you DATA and Pointer
+    //!! basically you DATA and Pointer
 
     struct Node *head; //!! this is the head and it should be a null because it should be initialized
     struct Node *one = NULL;
@@ -59,8 +61,10 @@ int main(){
     struct Node *four = NULL;
     struct Node *five = NULL;
 
-    // !! alocate memory here...
-    // ?? Using malloc here... memory allocation
+    //!! alocate memory here...
+    //?? Using malloc here... memory allocation
+    //!! making thie size here ...
+
     one = malloc(sizeof(struct Node));
     two = malloc(sizeof(struct Node));
     three = malloc(sizeof(struct Node));
@@ -68,6 +72,7 @@ int main(){
     five = malloc(sizeof(struct Node));
 
     //!! now to add the values of the nodes
+    
     one -> data  = "2 ako sunod";
     two -> data = "3 kini sunod";
     three -> data = "4 unya nako";
@@ -81,7 +86,6 @@ int main(){
     four -> next = five;
     five -> next = NULL;
 
-// !! this is to test
 head = one;
 
 printf("Default list: ");

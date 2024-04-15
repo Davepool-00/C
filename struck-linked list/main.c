@@ -2,11 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+// !! syntax for makiung the node
 
     struct Node {
         char  *data;
         struct Node *next;
     };
+
 
 // !! bubble sort function
 void BubbleSort(struct Node *head) {
@@ -14,18 +16,18 @@ void BubbleSort(struct Node *head) {
     struct Node *ptr;
     struct Node *last = NULL;
 
-    // Check if list is empty
-    if (head == NULL)
-        return;
+
 
     do {
         swapped = 0;
         ptr = head;
 
         while (ptr->next != last) {
-            // Compare strings using strcmp
+
+            //!! using string.h || strcmp to compare
             if (strcmp(ptr->data, ptr->next->data) > 0) {
-                // Swap data
+
+                //!! swapping begins here
                 char *temp = ptr->data;
                 ptr->data = ptr->next->data;
                 ptr->next->data = temp;
@@ -41,7 +43,7 @@ void BubbleSort(struct Node *head) {
 // !! This makes the list to be printed
     void PrintLIST(struct Node *node){
         while (node != NULL){
-            printf("%s ",node->data);
+            printf("\n %s \n",node->data);
             node = node->next;
         }
     }
@@ -66,11 +68,11 @@ int main(){
     five = malloc(sizeof(struct Node));
 
     //!! now to add the values of the nodes
-    one -> data  = "b";
-    two -> data = "c";
-    three -> data = "e";
-    four -> data = "a";
-    five -> data = "d";
+    one -> data  = "2 ako sunod";
+    two -> data = "3 kini sunod";
+    three -> data = "4 unya nako";
+    four -> data = "1 akoyuna";
+    five -> data = "5 ako last";
 
     // !! now to connect the nodes
     one -> next = two;
